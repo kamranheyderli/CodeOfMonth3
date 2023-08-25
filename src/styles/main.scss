@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(100deg, #575656, #062e3f);
+
+    .container {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+
+        h1 {
+            font-size: 50px;
+            color: white;
+        }
+
+        .input {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                width: 100%;
+                height: 40px;
+                border: none;
+                background-color: rgb(44, 41, 41);
+                color: rgb(255, 255, 255);
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+                padding-left: 10px;
+                font-size: 15px;
+                font-weight: 800;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                width: 90px;
+                height: 40px;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                background-color: white;
+                color: black;
+                font-size: 18px;
+                font-weight: 800;
+                border-left: none;
+            }
+
+        }
+
+        .todolist {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(100deg, #575656, #062e3f);
+            border-radius: 10px;
+            padding: 15px;
+
+            li {
+                width: 100%;
+                height: 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                font-size: 20px;
+                font-weight: 700;
+                color: rgb(202, 190, 190);
+                margin-bottom: 15px;
+                border: 2px solid gray;
+                border-radius: 10px;
+
+                .button_group {
+                    display: flex;
+                    column-gap: 20px;
+
+                    .check {
+                        width: 25px;
+                        height: 20px;
+                        color: white;
+                    }
+
+                    .delete {
+                        width: 25px;
+                        height: 20px;
+                        color: white;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .body{
+        .container{
+            width: 95%;
+            h1{
+                font-size: 40px;
+            }
+            .input{
+                width:100%;
+                
+            }
+
+            .todolist{
+                width: 100%;
+            }
+        }
+
+
+    }
+}
